@@ -1,0 +1,145 @@
+/* style.css */
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background: radial-gradient(circle at top, #dfe6e9, #b2bec3);
+  text-align: center;
+  direction: rtl;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+/* مانیتور */
+.computer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monitor {
+  width: 320px;
+  height: 240px;
+  background: #2d3436;
+  border: 10px solid #636e72;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #1e272e, #485460);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* دایره در وسط مانیتور */
+.circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 5px solid #74b9ff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* اعداد روی دایره */
+.number {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  font-weight: bold;
+  color: #2d3436;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.number:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -10%); }
+.number:nth-child(2) { top: 25%; right: 5%; transform: translateY(-50%); }
+.number:nth-child(3) { bottom: 25%; right: 5%; transform: translateY(50%); }
+.number:nth-child(4) { bottom: 0; left: 50%; transform: translate(-50%, 10%); }
+.number:nth-child(5) { bottom: 25%; left: 5%; transform: translateY(50%); }
+.number:nth-child(6) { top: 25%; left: 5%; transform: translateY(-50%); }
+
+/* فلش در بالا */
+.pointer {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid #fdcb6e;
+  filter: drop-shadow(0 0 5px #fff);
+}
+
+.base {
+  width: 180px;
+  height: 20px;
+  background: #636e72;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* دکمه‌ها */
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 8px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+#startBtn {
+  background: linear-gradient(45deg, #00b894, #55efc4);
+}
+
+#stopBtn {
+  background: linear-gradient(45deg, #d63031, #ff7675);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* سوال */
+#question {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.9);
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin-inline: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
